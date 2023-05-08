@@ -45,6 +45,11 @@ export const TextToSpeechForm = () => {
     // ボイス一覧取得
     const vs = synth.getVoices().filter(v => v.lang === 'ja-JP');
     setVoices(vs);
+    
+    // 初回読み上げ
+    const text = 'こんにちは、テキスト読み上げアプリです';
+    const utterance = new window.SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
   },[]);
   
   return (
