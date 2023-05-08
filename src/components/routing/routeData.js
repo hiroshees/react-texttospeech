@@ -9,6 +9,10 @@ export const routeData = [
         element: <Layout />,
         children: [
             {
+                index: true,
+                element: <Home />,
+            },
+            {
                 path: 'about',
                 element: <About />,
             },

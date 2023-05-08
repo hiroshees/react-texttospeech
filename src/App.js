@@ -4,8 +4,11 @@ import { AppProvider } from './components/providers/AppProvider';
 
 function App() {
   return (
-    <>
-    </>
+    <AppProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 
